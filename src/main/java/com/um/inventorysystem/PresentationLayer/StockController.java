@@ -2,11 +2,12 @@ package com.um.inventorysystem.PresentationLayer;
 
 import com.um.inventorysystem.BusinessLayer.StockItemService;
 import com.um.inventorysystem.DataLayer.StockItem;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
 //@RequestController
-//@RequestMapping("stockItem")
+@RequestMapping("stockItem")
 public class StockController {
 
     //@Autowired
