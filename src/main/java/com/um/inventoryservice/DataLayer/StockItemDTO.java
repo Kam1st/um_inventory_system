@@ -1,19 +1,13 @@
 package com.um.inventoryservice.DataLayer;
 
-
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class StockItem {
-
-    @Id
-    private String id;
-
+public class StockItemDTO {
     String stockItemId;
     String description;
     int supplierId;
