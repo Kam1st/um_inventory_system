@@ -8,7 +8,7 @@ services:
             - ./nginx/njs:/etc/nginx/njs
 
     inventory-service:
-        build: um_inventory_system
+        build: .
         environment:
             - SPRING_PROFILES_ACTIVE=docker
         depends_on:
