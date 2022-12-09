@@ -3,12 +3,12 @@ package com.um.inventoryservice.PresentationLayer;
 import com.um.inventoryservice.BusinessLayer.StockItemService;
 import com.um.inventoryservice.DataLayer.StockItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@RestController
+@RequestMapping("stocks")
 public class StockController {
 
     @Autowired

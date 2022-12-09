@@ -14,9 +14,9 @@ public class StockItem {
     @Id
     private String id;
 
-    String stockItemId;
-    String description;
-    int supplierId;
-    int salesQuantity;
-    double price;
+    private String stockItemId;
+    private String description;
+    private int supplierId;
+    private int salesQuantity;
+    private double price;
 }
