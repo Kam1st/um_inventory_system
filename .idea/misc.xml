@@ -4,10 +4,14 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="FLOW" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="17" project-jdk-type="JavaSDK">
+>>>>>>> 415255f89185bae9700ba930b94c9b34b892783e
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
