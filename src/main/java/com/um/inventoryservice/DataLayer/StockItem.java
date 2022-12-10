@@ -1,6 +1,5 @@
 package com.um.inventoryservice.DataLayer;
 
-
 import lombok.*;
 import org.springframework.data.annotation.Id;
 

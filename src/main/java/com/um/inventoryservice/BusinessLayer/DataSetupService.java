@@ -1,18 +1,16 @@
 package com.um.inventoryservice.BusinessLayer;
 
-
-import com.um.inventoryservice.DataLayer.StockItem;
 import com.um.inventoryservice.DataLayer.StockItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Service
 public class DataSetupService implements CommandLineRunner {
 
-    @Autowired StockItemService stockItemService;
+    @Autowired
+    StockItemService stockItemService;
+
     @Override
     public void run(String... args) throws Exception {
         StockItemDTO s1 = new StockItemDTO("2454544", "hi this is a test", 1, 3864, 28.6);
@@ -26,6 +24,4 @@ public class DataSetupService implements CommandLineRunner {
 
 
     }
-
-
 }

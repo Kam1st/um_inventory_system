@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("stocks")
 public class StockController {
-
     @Autowired
     StockItemService stockItemService;
 
@@ -23,5 +23,4 @@ public class StockController {
     public Mono<StockItemDTO> insertStock(@RequestBody Mono<StockItemDTO> stockItemDTOMono) {
         return stockItemService.insertStock(stockItemDTOMono);
     }
-
 }

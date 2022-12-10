@@ -1,31 +1,31 @@
 package com.um.inventoryservice.BusinessLayer;
 
 import com.um.inventoryservice.DataLayer.StockItemDTO;
-import com.um.inventoryservice.DataLayer.StockItemRepo;
-import com.um.inventoryservice.util.EntityDtoUtil;
+import com.um.inventoryservice.DataLayer.StockItemRepository;
+import com.um.inventoryservice.util.EntityDTOUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-public class StockItemServiceImpl implements StockItemService {
+public class StockItemServiceImpl implements StockItemService{
 
     @Autowired
-    StockItemRepo stockItemRepo;
+    StockItemRepository stockItemRepository;
 
     @Override
     public Flux<StockItemDTO> getAll() {
-        return stockItemRepo.findAll()
-                .map(EntityDtoUtil::toDTO);
+        return stockItemRepository.findAll()
+                .map(EntityDTOUtil::toDTO);
     }
 
     @Override
     public Mono<StockItemDTO> insertStock(Mono<StockItemDTO> stockItemDTOMono) {
         return stockItemDTOMono
-                .map(EntityDtoUtil::toEntity)
+                .map(EntityDTOUtil::toEntity)
 //                .doOnNext(e -> e.(EntityDtoUtil.generateStockId()))
-                .flatMap((stockItemRepo::save))
-                .map(EntityDtoUtil::toDTO);
+                .flatMap((stockItemRepository::save))
+                .map(EntityDTOUtil::toDTO);
     }
 }
