@@ -11,10 +11,6 @@
         <module name="um_inventory_system.main" />
       </profile>
     </annotationProcessing>
-<<<<<<< HEAD
-    <bytecodeTargetLevel target="17" />
-=======
     <bytecodeTargetLevel target="1.8" />
->>>>>>> 415255f89185bae9700ba930b94c9b34b892783e
   </component>
 </project>
